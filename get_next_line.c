@@ -6,7 +6,7 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 17:11:44 by dlom              #+#    #+#             */
-/*   Updated: 2023/06/11 14:58:12 by dlom             ###   ########.fr       */
+/*   Updated: 2023/06/11 15:07:00 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ char	ft_i_read_file(int fd, char *store)
 		buf[r] = '\0';
 		store = ft_strjoin(store, buf);
 	}
-	
 }
 
 char	*get_next_line(int fd)
@@ -48,7 +47,4 @@ char	*get_next_line(int fd)
 	store[fd] = ft_i_read_file(fd, store[fd]);
 	if (store[fd] == NULL)
 		return (NULL);
-	//line =
-	//store[fd] =
-	//return(line)
 }
