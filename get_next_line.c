@@ -6,7 +6,7 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 17:11:44 by dlom              #+#    #+#             */
-/*   Updated: 2023/06/11 13:42:31 by dlom             ###   ########.fr       */
+/*   Updated: 2023/06/11 14:06:38 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,19 @@ RETURN: the line that was read or NULL if an error occured or if there
 	is nothing else to be read.
 Function that returns a line read from a file descriptor.
 */
-char	ft_i_read_file(int fd, char *char_absorber)
+char	ft_i_read_file(int fd, char *store)
 {
+	int		r;
+	char	*buf;
+
+	r = 1;
+	buf = (char *)malloc(BUFFER_SIZE + 1);
+	if (buf == NULL)
+		return (NULL);
+	while (r > 0 && !ft_strchr(store, '\n'))
+	{
+		/* code */
+	}
 	
 }
 
