@@ -6,7 +6,7 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 17:20:08 by dlom              #+#    #+#             */
-/*   Updated: 2023/06/12 20:43:41 by dlom             ###   ########.fr       */
+/*   Updated: 2023/06/12 20:53:53 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ takes two argument: the string to search in and the character to search for
 RETURNS a pointer to the first occurence of the character or NULL if
 the character is not found.
 */
+
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s != (char)c)
