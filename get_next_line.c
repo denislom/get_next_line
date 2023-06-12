@@ -6,7 +6,7 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 17:11:44 by dlom              #+#    #+#             */
-/*   Updated: 2023/06/12 20:17:45 by dlom             ###   ########.fr       */
+/*   Updated: 2023/06/12 22:20:34 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,23 @@ RETURN: the line that was read or NULL if an error occured or if there
 	is nothing else to be read.
 Function that returns a line read from a file descriptor.
 */
+/*
+ft_get_line_from_store
+*/
+char	*ft_get_line_from_store(char *store)
+{
+	int		i;
+	int		j;
+	char	*line;
 
-char	*ft_get_line_from_strore(char *store)
+	i = 0;
+	j = 0;
+}
+
+/*
+ft_get_rest_from_store
+*/
+char	*ft_get_rest_from_store(char *store)
 {
 	int		i;
 	int		j;
@@ -32,7 +47,15 @@ char	*ft_get_line_from_strore(char *store)
 		free(store);
 		return (NULL);
 	}
-	store
+	rest = (char *)malloc(ft_strlen(store) - i + 1);
+	if (rest == NULL)
+		return (NULL);
+	i++;
+	while (store[i] == '\0')
+		rest[i++] = store[i++];
+	rest[i] = '\0';
+	free(store);
+	return (rest);
 }
 
 /*
