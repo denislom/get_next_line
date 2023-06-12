@@ -6,12 +6,23 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 17:20:08 by dlom              #+#    #+#             */
-/*   Updated: 2023/06/11 14:59:46 by dlom             ###   ########.fr       */
+/*   Updated: 2023/06/12 20:43:41 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <get_next_line.h>
 
+int	ft_strlen(const char	*str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
 /*
 locates the first occurence of a specific character in a strig
 takes two argument: the string to search in and the character to search for
@@ -28,6 +39,7 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return ((char *)s);
 }
+
 /*
 RETURN VALUE: 
 The new string.
