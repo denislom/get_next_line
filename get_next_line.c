@@ -6,7 +6,7 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 17:11:44 by dlom              #+#    #+#             */
-/*   Updated: 2023/06/12 22:24:22 by dlom             ###   ########.fr       */
+/*   Updated: 2023/06/13 22:36:20 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,20 @@ char	*ft_get_line_from_store(char *store)
 
 	i = 0;
 	j = 0;
+	if (store[i] == '\0')
+		return (NULL);
+	while (store[i] && store[i] != '\n')
+		i++;
+	line = (char *)malloc(i + 2);
+	if (line == NULL)
+		return (NULL);
+	i = 0;
+	while (store[j] && store[j] != '\n')
+		line[i++] = store[j++];
+	if (store[i] == '\n')
+		line[i++] = store[j++];
+	line[i] = '\0';
+	return (line);
 }
 
 /*
