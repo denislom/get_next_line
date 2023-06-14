@@ -6,7 +6,7 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 17:11:44 by dlom              #+#    #+#             */
-/*   Updated: 2023/06/15 00:59:54 by dlom             ###   ########.fr       */
+/*   Updated: 2023/06/15 01:06:33 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char	*ft_get_rest_from_store(char *store)
 ft_i_read_file
 */
 
-char	ft_i_read_file(int fd, char *store)
+char	*ft_i_read_file(int fd, char *store)
 {
 	int		r;
 	char	*buf;
@@ -110,4 +110,7 @@ char	*get_next_line(int fd)
 	store[fd] = ft_i_read_file(fd, store[fd]);
 	if (store[fd] == NULL)
 		return (NULL);
+	line = ft_get_line_from_store(store[fd]);
+	store[fd] = ft_get_rest_from_store(store[fd]);
+	return (line);
 }
