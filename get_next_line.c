@@ -6,7 +6,7 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 17:11:44 by dlom              #+#    #+#             */
-/*   Updated: 2023/06/14 23:25:55 by dlom             ###   ########.fr       */
+/*   Updated: 2023/06/15 00:42:42 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char	*ft_get_rest_from_store(char *store)
 		return (NULL);
 	i++;
 	while (store[i] == '\0')
-		rest[i++] = store[i++];
+		rest[j++] = store[i++];
 	rest[i] = '\0';
 	free(store);
 	return (rest);
