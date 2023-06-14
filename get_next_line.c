@@ -6,7 +6,7 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 17:11:44 by dlom              #+#    #+#             */
-/*   Updated: 2023/06/15 00:42:42 by dlom             ###   ########.fr       */
+/*   Updated: 2023/06/15 00:59:54 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,13 +84,14 @@ char	ft_i_read_file(int fd, char *store)
 	r = 1;
 	buf = (char *)malloc(BUFFER_SIZE + 1);
 	if (buf == NULL)
-		return (NULL);
+		return (0);
 	while (r > 0 && !ft_strchr(store, '\n'))
 	{
+		r = read(fd, buf, BUFFER_SIZE);
 		if (r == -1)
 		{
 			free(buf);
-			return (NULL);
+			return (0);
 		}
 		buf[r] = '\0';
 		store = ft_strjoin(store, buf);

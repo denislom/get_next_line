@@ -6,7 +6,7 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 17:07:11 by dlom              #+#    #+#             */
-/*   Updated: 2023/06/15 00:48:46 by dlom             ###   ########.fr       */
+/*   Updated: 2023/06/15 00:59:49 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 char	*get_next_line(int fd);
 int		ft_strlen(const char	*str);
