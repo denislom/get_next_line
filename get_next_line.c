@@ -6,11 +6,11 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 17:11:44 by dlom              #+#    #+#             */
-/*   Updated: 2023/06/13 22:36:20 by dlom             ###   ########.fr       */
+/*   Updated: 2023/06/14 23:25:55 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <get_next_line.h>
+#include "get_next_line.h"
 /*
 RETURN: the line that was read or NULL if an error occured or if there
 	is nothing else to be read.

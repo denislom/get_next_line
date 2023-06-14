@@ -6,11 +6,11 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 17:20:08 by dlom              #+#    #+#             */
-/*   Updated: 2023/06/12 20:53:53 by dlom             ###   ########.fr       */
+/*   Updated: 2023/06/14 23:27:29 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <get_next_line.h>
+#include "get_next_line.h"
 
 int	ft_strlen(const char	*str)
 {
