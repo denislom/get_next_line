@@ -6,7 +6,7 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 17:11:44 by dlom              #+#    #+#             */
-/*   Updated: 2023/06/15 01:06:33 by dlom             ###   ########.fr       */
+/*   Updated: 2023/06/15 10:09:58 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ char	*ft_get_rest_from_store(char *store)
 
 	i = 0;
 	j = 0;
-	while (store[i] && store[i] == '\n')
+	while (store[i] && store[i] != '\n')
 		i++;
 	if (store[i] == '\n')
 	{
