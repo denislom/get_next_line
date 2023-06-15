@@ -6,7 +6,7 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 17:20:08 by dlom              #+#    #+#             */
-/*   Updated: 2023/06/14 23:27:29 by dlom             ###   ########.fr       */
+/*   Updated: 2023/06/15 11:03:31 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ RETURNS a pointer to the first occurence of the character or NULL if
 the character is not found.
 */
 
+/*
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s != (char)c)
@@ -39,6 +40,26 @@ char	*ft_strchr(const char *s, int c)
 		s++;
 	}
 	return ((char *)s);
+}
+*/
+char	*ft_strchr(const char *s, int c)
+{
+	const char	*ptr;
+	int			i;
+
+	if (s == NULL)
+		return (NULL);
+	i = 0;
+	ptr = s;
+	while (ptr[i])
+	{
+		if (ptr[i] == (char) c)
+			return ((char *)&ptr[i]);
+		i++;
+	}
+	if ((char) c == ptr[i])
+		return ((char *)&ptr[i]);
+	return (NULL);
 }
 
 /*
