@@ -20,6 +20,7 @@ int main(void)
 	return (0);
 }
 */
+/*
 int main(void)
 {
 	char *line;
@@ -52,5 +53,40 @@ int main(void)
 		i++;
 	}
 
+	return (0);
+}
+*/
+
+int	main(void)
+{
+	char	*line;
+	int		fd;
+	// int		fd2;
+	// int		fd3;
+	int		i;
+    
+	fd = open("test0.txt", O_RDONLY);
+	//bonus
+	//fd2 = open("test2.txt", O_RDONLY);
+	//fd3 = open("test3.txt", O_RDONLY);
+    
+	i = 0;
+	while (i < 10)
+	{
+		line = get_next_line(fd);
+		printf("line %d: %s", i, line);
+		free(line);
+		//bonuses
+		//line = get_next_line(fd2);
+		//printf("line %d: %s", i, line);
+		//free(line);
+		//line = get_next_line(fd3);
+		//printf("line %d: %s", i, line);
+		//free(line);
+		i++;
+	}
+	close(fd);
+	// close(fd2);
+	// close(fd3);
 	return (0);
 }
