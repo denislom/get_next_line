@@ -20,7 +20,7 @@ int main(void)
 	return (0);
 }
 */
-/*
+// /*
 int main(void)
 {
 	char *line;
@@ -55,8 +55,8 @@ int main(void)
 
 	return (0);
 }
-*/
-
+// */
+/*
 int	main(void)
 {
 	char	*line;
@@ -90,3 +90,4 @@ int	main(void)
 	// close(fd3);
 	return (0);
 }
+*/
